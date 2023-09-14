@@ -3,11 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="main.js"></script>
+    <title>Watch | Wowis</title>
+    <style>
+        iframe {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* This assumes you want it to take the full viewport height */
+        }
+        body {
+            background-color: #1d1d1d;
+            overflow: hidden;
+        }
+
+    </style>
+  <script src="main.js"></script>
 </head>
 <body>
+    <div class="video">
     <iframe src="https://cricfree.live/live/embed/espn-usa" width="100%" height="100%" allowfullscreen="true" marginheight="0" marginwidth="0" scrolling="no" frameborder="0" allowfullscreen></iframe>
+    </div>
 </body>
 </html>

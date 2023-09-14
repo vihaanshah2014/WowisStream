@@ -285,7 +285,13 @@
       font-size: 15px;
     }
   
-    
+    .video {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* This assumes you want it to take the full viewport height */
+  }
+  
   
     
      
