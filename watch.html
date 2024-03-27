@@ -1,33 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Watch | Wowis</title>
-    <link rel="icon" type="image/svg+xml" href="./wowis.svg">
-    <style>
-        .video{
-            left: 50%;
-            top: 50%;
-        }
-        iframe {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* This assumes you want it to take the full viewport height */
-            width: 88%;
-        }
-        body {
-            background-color: #1d1d1d;
-            overflow: hidden;
-        }
-
-    </style>
-  <script src="main.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch | Wowis</title>
+  <link rel="icon" type="image/svg+xml" href="./wowis.svg">
+  <style>
+    .video {
+      left: 50%;
+      top: 50%;
+    }
+    iframe {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 88%;
+    }
+    body {
+      background-color: #1d1d1d;
+      overflow: hidden;
+    }
+  </style>
 </head>
 <body>
-    <div class="video">
-        <!-- <iframe src="" frameborder="0" allowfullscreen></iframe> -->
-    </div>
+  <div class="video"></div>
+
+  <script>
+    function loadIframeUrl(iframeUrl) {
+      const videoContainer = document.querySelector('.video');
+      
+      if (iframeUrl) {
+        // Load the selected iframe URL into the .video element
+        videoContainer.innerHTML = `<iframe src="${iframeUrl}" frameborder="0" allowfullscreen></iframe>`;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // Check if there is a stored iframe URL in the history state
+      if (history.state && history.state.iframeUrl) {
+        loadIframeUrl(history.state.iframeUrl);
+      }
+    });
+
+    window.addEventListener('popstate', function (event) {
+      // Load the iframe URL from the history state when the user navigates back or forward
+      if (event.state && event.state.iframeUrl) {
+        loadIframeUrl(event.state.iframeUrl);
+      }
+    });
+  </script>
 </body>
 </html>
