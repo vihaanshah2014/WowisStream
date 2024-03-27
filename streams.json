@@ -1,0 +1,219 @@
+{
+    "channels": [
+      {
+        "name": "Sky Sports",
+        "featuredStream": "https://cricfree.live/live/embed/sky-sports-main-event",
+        "streams": [
+          {
+            "name": "Main",
+            "url": "https://cricfree.live/live/embed/sky-sports-main-event"
+          },
+          {
+            "name": "Premier League",
+            "url": "https://cricfree.live/live/embed/sky-sports-premier-league"
+          },
+          {
+            "name": "Football",
+            "url": "https://cricfree.live/live/embed/sky-sports-football"
+          },
+          {
+            "name": "Cricket",
+            "url": "https://cricfree.live/live/embed/sky-sports-cricket"
+          },
+          {
+            "name": "News",
+            "url": "https://cricfree.live/live/embed/sky-sports-news"
+          },
+          {
+            "name": "Action",
+            "url": "https://cricfree.live/live/embed/sky-sports-action"
+          },
+          {
+            "name": "Golf",
+            "url": "https://cricfree.live/live/embed/sky-sports-golf"
+          },
+          {
+            "name": "Mix",
+            "url": "https://cricfree.live/live/embed/sky-sports-mix"
+          }
+        ]
+      },
+      {
+        "name": "Fox Sports",
+        "streams": [
+          {
+            "name": "Sports 1",
+            "url": "https://cricfree.live/live/embed/fox-sports-1-usa"
+          },
+          {
+            "name": "Sports 2",
+            "url": "https://cricfree.live/live/embed/fox-sports-2-usa"
+          },
+          {
+            "name": "501",
+            "url": "https://cricfree.live/live/embed/fox-501"
+          },
+          {
+            "name": "502",
+            "url": "https://cricfree.live/live/embed/fox-502"
+          },
+          {
+            "name": "503",
+            "url": "https://cricfree.live/live/embed/fox-503"
+          },
+          {
+            "name": "504",
+            "url": "https://cricfree.live/live/embed/fox-504"
+          },
+          {
+            "name": "505",
+            "url": "https://cricfree.live/live/embed/fox-505"
+          },
+          {
+            "name": "506",
+            "url": "https://cricfree.live/live/embed/fox-506"
+          }
+        ]
+      },
+      {
+        "name": "ESPN",
+        "featuredStream": "https://cricfree.live/live/embed/espn-usa"
+      },
+      {
+        "name": "BeIn",
+        "streams": [
+          {
+            "name": "English 1",
+            "url": "https://cricfree.live/live/embed/bein-sports-1-english"
+          },
+          {
+            "name": "English 2",
+            "url": "https://cricfree.live/live/embed/bein-sports-2-english"
+          },
+          {
+            "name": "English 3",
+            "url": "https://cricfree.live/live/embed/bein-sports-3-english"
+          },
+          {
+            "name": "Premier 1",
+            "url": "https://cricfree.live/live/embed/bein-sports-1-premium"
+          },
+          {
+            "name": "Premier 2",
+            "url": "https://cricfree.live/live/embed/bein-sports-2-premium"
+          },
+          {
+            "name": "Premier 3",
+            "url": "https://cricfree.live/live/embed/bein-sports-3-premium"
+          },
+          {
+            "name": "French 1",
+            "url": "https://cricfree.live/live/embed/bein-sports-1-french"
+          },
+          {
+            "name": "French 2",
+            "url": "https://cricfree.live/live/embed/bein-sports-2-french"
+          },
+          {
+            "name": "French 3",
+            "url": "https://cricfree.live/live/embed/bein-sports-3-french"
+          }
+        ]
+      },
+      {
+        "name": "SuperSport",
+        "streams": [
+          {
+            "name": "Grand stand",
+            "url": "https://cricfree.live/live/embed/supersports-grandstand"
+          },
+          {
+            "name": "Premier League",
+            "url": "https://cricfree.live/live/embed/supersports-premier-league"
+          },
+          {
+            "name": "Football",
+            "url": "https://cricfree.live/live/embed/supersports-football"
+          },
+          {
+            "name": "Cricket",
+            "url": "https://cricfree.live/live/embed/supersports-cricket"
+          },
+          {
+            "name": "La Liga",
+            "url": "https://cricfree.live/live/embed/supersports-la-liga"
+          },
+          {
+            "name": "Rugby",
+            "url": "https://cricfree.live/live/embed/supersports-rugby"
+          },
+          {
+            "name": "Action",
+            "url": "https://cricfree.live/live/embed/supersports-action"
+          }
+        ]
+      },
+      {
+        "name": "BT Sport",
+        "streams": [
+          {
+            "name": "BT Sport 1",
+            "url": "https://cricfree.live/live/embed/bt-sport-2"
+          },
+          {
+            "name": "BT Sport 2",
+            "url": "https://cricfree.live/live/embed/bt-sport-2"
+          },
+          {
+            "name": "BT Sport 3",
+            "url": "https://cricfree.live/live/embed/bt-sport-3"
+          },
+          {
+            "name": "BT Sport 4",
+            "url": "https://cricfree.live/live/embed/bt-sport-4"
+          },
+          {
+            "name": "Racing Uk",
+            "url": "https://cricfree.live/live/embed/racing-uk"
+          },
+          {
+            "name": "Astro Cricket",
+            "url": "https://cricfree.live/live/embed/astro-cricket"
+          },
+          {
+            "name": "Willow",
+            "url": "https://cricfree.live/live/embed/willow-hd"
+          }
+        ]
+      },
+      {
+        "name": "Sports TV",
+        "streams": [
+          {
+            "name": "Channel 1",
+            "url": "https://cricfree.live/live/embed/sport-tv-1"
+          },
+          {
+            "name": "Channel 2",
+            "url": "https://cricfree.live/live/embed/sport-tv-2"
+          },
+          {
+            "name": "Channel 3",
+            "url": "https://cricfree.live/live/embed/sport-tv-3"
+          },
+          {
+            "name": "Channel 4",
+            "url": "https://cricfree.live/live/embed/sport-tv-4"
+          },
+          {
+            "name": "Eurosport 1",
+            "url": "https://cricfree.live/live/embed/eurosports-1"
+          },
+          {
+            "name": "Eurosport 2",
+            "url": "https://cricfree.live/live/embed/eurosports-2"
+          }
+        ]
+      }
+    ]
+  }

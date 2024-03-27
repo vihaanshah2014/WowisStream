@@ -1,48 +1,66 @@
 document.addEventListener('DOMContentLoaded', function () {
   const links = document.querySelectorAll('a[data-iframe-url]');
-  
   links.forEach(function (link) {
-    link.addEventListener('click', function (event) {
-      event.preventDefault();
-      const iframeUrl = link.getAttribute('data-iframe-url');
-      
-      // Update the URL using the History API
-      history.pushState({ iframeUrl: iframeUrl }, '', 'watch.html');
-      
-      // Load the selected iframe URL
-      loadIframeUrl(iframeUrl);
-    });
+      link.addEventListener('click', function (event) {
+          event.preventDefault();
+          const iframeUrl = link.getAttribute('data-iframe-url');
+          localStorage.setItem('selectedIframeUrl', iframeUrl);
+          window.location.href = 'watch.html';
+      });
   });
 });
 
-function loadIframeUrl(iframeUrl) {
-  const videoContainer = document.querySelector('.video');
-  
-  if (iframeUrl) {
-    // Load the selected iframe URL into the .video element
-    videoContainer.innerHTML = `<iframe src="${iframeUrl}" frameborder="0" allowfullscreen></iframe>`;
-  }
-}
-
 document.addEventListener('DOMContentLoaded', function () {
-    const videoContainer = document.querySelector('.video');
-    
-    // Retrieve the selected iframe URL from localStorage
-    const iframeUrl = localStorage.getItem('selectedIframeUrl');
-    
-    if (iframeUrl) {
-        // Load the selected iframe URL into the .video element
-        videoContainer.innerHTML = `<iframe src="${iframeUrl}" frameborder="0" allowfullscreen></iframe>`;
-        
-        // Clear the stored iframe URL from localStorage (optional)
-        localStorage.removeItem('selectedIframeUrl');
-    }
+  const videoContainer = document.querySelector('.video');
+  const loadingIndicator = document.getElementById('loading-indicator');
+  const iframeUrl = localStorage.getItem('selectedIframeUrl');
+
+  if (iframeUrl) {
+      loadingIndicator.style.display = 'block';
+
+      const iframe = document.createElement('iframe');
+      iframe.frameborder = "0";
+      iframe.allowfullscreen = true;
+
+      // Generate a unique identifier for the iframe
+      const iframeId = 'unique-iframe-' + Date.now();
+      iframe.id = iframeId;
+
+      // Create a unique URL for the iframe with the identifier
+      const iframeUrlWithId = `${iframeUrl}?iframe_id=${iframeId}`;
+      iframe.src = iframeUrlWithId;
+
+      iframe.onload = function () {
+          loadingIndicator.style.display = 'none';
+      };
+
+      // Timeout to hide the loading indicator after 5 seconds (adjust as needed)
+      setTimeout(function () {
+          loadingIndicator.style.display = 'none';
+      }, 5000);
+
+      videoContainer.appendChild(iframe);
+
+      // Listen for messages from the iframe
+      window.addEventListener('message', function (event) {
+          if (event.data === 'adClicked') {
+              // If the message indicates an ad was clicked, reload the iframe
+              iframe.src = iframeUrlWithId;
+          }
+      });
+  }
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const videoContainer = document.querySelector('.video');
+  const iframeUrl = localStorage.getItem('selectedIframeUrl');
+  if (iframeUrl) {
+    videoContainer.innerHTML = `<iframe src="${iframeUrl}" frameborder="0" allowfullscreen></iframe>`;
+  }
+});
 
 const arrows = document.querySelectorAll(".arrow");
 const movieLists = document.querySelectorAll(".movie-list");
-
 arrows.forEach((arrow, i) => {
   const itemNumber = movieLists[i].querySelectorAll("img").length;
   let clickCounter = 0;
@@ -58,16 +76,17 @@ arrows.forEach((arrow, i) => {
       clickCounter = 0;
     }
   });
-
   console.log(Math.floor(window.innerWidth / 270));
 });
 
 //TOGGLE
-
 const ball = document.querySelector(".toggle-ball");
-ball.addEventListener("click", () => {
-  items.forEach((item) => {
-    item.classList.toggle("active");
+if (ball) {
+  ball.addEventListener("click", () => {
+    const items = document.querySelectorAll(".movie-list-item");
+    items.forEach((item) => {
+      item.classList.toggle("active");
+    });
+    ball.classList.toggle("active");
   });
-  ball.classList.toggle("active");
-});
+}
